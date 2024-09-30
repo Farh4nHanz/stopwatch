@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsla(0, 0%, 0%, .85);
+
+  .stopwatch {
+    padding: 20px;
+    border: 3px solid hsla(0, 0%, 80%, .75);
+    border-radius: 15px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+
+    .display {
+      color: #fff;
+      font: 500 calc(2rem + 1.5vw) monospace, sans-serif;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+
+      & button {
+        border: none;
+        font-size: 1rem;
+        padding: 10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background .2s ease;
+        color: #000;
+      }
+
+      .start-button {
+        background: hsl(120, 100%, 45%);
+
+        &:hover {
+          background: hsl(120, 100%, 35%);
+        }
+      }
+
+      .stop-button {
+        background: hsl(55, 100%, 50%);
+
+        &:hover {
+          background: hsl(55, 100%, 45%);
+        }
+      }
+
+      .reset-button {
+        background: hsl(0, 100%, 55%);
+
+        &:hover {
+          background: hsl(0, 100%, 45%);
+        }
+      }
+    }
+  }
+}
